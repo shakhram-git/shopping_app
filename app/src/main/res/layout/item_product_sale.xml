@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="174dp"
+    android:layout_height="221dp"
+    app:cardBackgroundColor="#E4E4E4"
+    app:cardCornerRadius="11dp"
+    app:cardElevation="0dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        app:srcCompat="@drawable/other_user_icon" />
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/background_discount"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingHorizontal="6dp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        tools:text="30% off" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="87dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="17dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_category_big"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="1dp"
+            android:textColor="#070604"
+            android:textSize="9sp"
+            tools:text="Kids" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_semibold"
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            tools:text="New balance sneakers" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            tools:text="$ 33,00" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="7dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/add_to_favourite"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            app:cardBackgroundColor="#EEEFF4"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:tint="#545589"
+                app:srcCompat="@drawable/icon_heart" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/add_to_cart"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:cardBackgroundColor="#EEEFF4"
+            app:cardCornerRadius="35dp"
+            app:cardElevation="0dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:tint="#545589"
+                app:srcCompat="@drawable/icon_plus" />
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>

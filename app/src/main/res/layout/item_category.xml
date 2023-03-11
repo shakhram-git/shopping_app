@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="50dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="42dp"
+        android:layout_height="38dp"
+        app:cardBackgroundColor="#EEEFF4"
+        app:cardCornerRadius="38dp"
+        app:cardElevation="0dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:scaleType="center"
+            android:id="@+id/icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/icon_phone"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="#A6A7AB"
+        android:textSize="8sp"
+        tools:text="Phones" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

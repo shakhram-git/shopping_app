@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+    namespace 'com.example.shoppingapp'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.shoppingapp"
+        minSdk 28
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation Deps.core
+    implementation Deps.appcompat
+    implementation Deps.androidMaterial
+    implementation Deps.constraintLayout
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    testImplementation TestDeps.junit
+    androidTestImplementation AndroidTestDeps.junit
+    androidTestImplementation AndroidTestDeps.espresso
+
+    implementation project(":domain")
+    implementation project(":data")
+
+    implementation HiltDagger.hilt
+    kapt HiltDagger.hiltCompiler
+
+    implementation ViewPager.viewPager2
+
+    implementation Deps.fragment
+
+    implementation AdapterDelegates.adapterDelegates
+    implementation AdapterDelegates.adapterDelegatesViewBinding
+
+    implementation Glide.glide
+    annotationProcessor Glide.glideCompiler
+
+    //PrefsDataBase
+    implementation Preferences.prefsDataStore
+
+}

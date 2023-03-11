@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.LoginFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="42dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="107dp"
+            android:text="@string/welcome_back" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_email"
+            style="@style/EditTextStyle"
+            android:freezesText="true"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:background="@drawable/background_text_input"
+            android:textCursorDrawable="@drawable/text_cursor"
+            android:gravity="center"
+            android:hint="@string/email"
+
+            android:paddingVertical="7dp" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/background_text_input">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_password"
+                style="@style/EditTextStyle"
+                android:freezesText="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingVertical="7dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/password_eye_btn"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="15dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/icon_eye_off" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/login_btn"
+            style="@style/ButtonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/background_big_btn"
+            android:gravity="center"
+            android:paddingVertical="14dp"
+            android:text="@string/login" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="114dp"
+    android:layout_height="149dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="9dp"
+    android:background="@drawable/gradient_brand_item">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:maxLines="2"
+        android:layout_marginHorizontal="5dp"
+        android:text="@string/brand_name"
+        android:gravity="center"/>
+
+</FrameLayout>

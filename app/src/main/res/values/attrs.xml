@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomMenuItemView">
+        <attr name="nameText" format="string"/>
+        <attr name="infoText" format="string"/>
+        <attr name="actionVisibility" format="boolean"/>
+        <attr name="iconSrc" format="reference"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ProfileFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:stateListAnimator="@null">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/white"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="42dp"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:layout_marginBottom="36dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_collapseMode="parallax">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:cardCornerRadius="60dp"
+                    app:strokeColor="#C0C0C0"
+                    app:strokeWidth="1dp"
+                    app:cardElevation="0dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/user_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="center"
+                        app:srcCompat="@drawable/icon_user" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/change_photo_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/change_photo"
+                    android:textColor="#808080"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="#3F3F3F"
+                    android:textSize="15sp"
+                    tools:text="Satria Adhi Pradana" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/icon_arrow_left"
+                app:title="@string/profile"
+                app:titleCentered="true"
+                app:titleTextAppearance="@style/AppBarTitleText">
+
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="63dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="42dp"
+                android:background="@drawable/background_big_btn">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="50dp"
+                    app:srcCompat="@drawable/icon_upload" />
+
+                <TextView
+                    android:id="@+id/login_btn"
+                    style="@style/ButtonTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:gravity="center"
+                    android:paddingVertical="11dp"
+                    android:text="@string/upload_item" />
+            </FrameLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="14dp"
+                android:orientation="vertical"
+                app:divider="@drawable/divider_empty_vertical"
+                app:showDividers="middle">
+
+                <com.example.shoppingapp.presentation.customview.CustomMenuItemView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:iconSrc="@drawable/icon_card"
+                    app:nameText="Trade store" />
+                <com.example.shoppingapp.presentation.customview.CustomMenuItemView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:iconSrc="@drawable/icon_card"
+                    app:nameText="Payment method" />
+                <com.example.shoppingapp.presentation.customview.CustomMenuItemView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:iconSrc="@drawable/icon_card"
+                    app:nameText="Balance"
+                    app:actionVisibility="false"
+                    app:infoText="$ 1593"/>
+                <com.example.shoppingapp.presentation.customview.CustomMenuItemView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:iconSrc="@drawable/icon_card"
+                    app:nameText="Trade history" />
+                <com.example.shoppingapp.presentation.customview.CustomMenuItemView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:iconSrc="@drawable/icon_refresh"
+                    app:nameText="Restore purchase" />
+                <com.example.shoppingapp.presentation.customview.CustomMenuItemView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:iconSrc="@drawable/icon_help"
+                    app:actionVisibility="false"
+                    app:nameText="Help" />
+                <com.example.shoppingapp.presentation.customview.CustomMenuItemView
+                    android:id="@+id/log_out_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:iconSrc="@drawable/icon_exit"
+                    app:actionVisibility="false"
+                    app:nameText="Log out" />
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
