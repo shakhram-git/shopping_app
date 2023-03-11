@@ -111,6 +111,7 @@ class HomeFragment : Fragment() {
         }
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             viewModel.productsName.collect { productsName ->
+                searchListAdapter.clear()
                 searchListAdapter.addAll(productsName)
                 binding.searchInput.showDropDown()
             }
@@ -191,9 +192,5 @@ class HomeFragment : Fragment() {
 
         }
 
-    private fun onSearchHintClick(text: String) {
-        binding.searchInput.setText(text)
-
-    }
 
 }
